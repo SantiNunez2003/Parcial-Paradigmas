@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/sn_styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Inmobiliaria</title>
 </head>
@@ -19,56 +19,61 @@
         </nav>
     </header>
 
-    <section id="inicio">
+    <main>
         <h2>Bienvenido a Inmobiliaria XYZ</h2>
         <p>Ofrecemos las mejores propiedades para ti y tu familia.</p>
-    </section>
 
-    <section id="propiedades">
-        <h2>Nuestras Propiedades</h2>
+        <section id="propiedades">
+            <h2>Nuestras Propiedades</h2>
+            <!-- Carrusel -->
+            <section class="propiedades-destacadas">
+                <div class="carrusel">
+                    <div class="imagenes">
+                        <img src="./imagenes/sn_departamento_1.jfif" alt="Casa en el centro">
+                        <img src="./imagenes/sn_departamento_2.webp" alt="Departamento en la playa">
+                        <img src="./imagenes/sn_casa_4.jfif" alt="Finca en el campo">
+                        <img src="./imagenes/sn_casa_2.jfif" alt="Finca en el campo">
+                        <img src="./imagenes/sn_casa_1.jfif" alt="Finca en el campo">
+                        <img src="./imagenes/sn_departamento_3.jfif" alt="Finca en el campo">
+                    </div>
+                    <div class="botones">
+                        <button id="prev">❮</button>
+                        <button id="next">❯</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Fin del Carrusel -->
 
-        <!-- Carrusel -->
-        <div class="carrusel">
-            <div class="imagenes">
-                <img src="https://via.placeholder.com/600x400?text=Casa+en+el+centro" alt="Casa en el centro">
-                <img src="https://via.placeholder.com/600x400?text=Departamento+en+la+playa" alt="Departamento en la playa">
-                <img src="https://via.placeholder.com/600x400?text=Finca+en+el+campo" alt="Finca en el campo">
+            <div class="propiedad">
+                <h3>Casa en el centro</h3>
+                <p>3 habitaciones, 2 baños, jardín, $250,000</p>
             </div>
-            <div class="botones">
-                <button id="prev">❮</button>
-                <button id="next">❯</button>
+            <div class="propiedad">
+                <h3>Departamento en la playa</h3>
+                <p>2 habitaciones, 1 baño, vista al mar, $150,000</p>
             </div>
-        </div>
-        <!-- Fin del Carrusel -->
+            <div class="propiedad">
+                <h3>Finca en el campo</h3>
+                <p>5 hectáreas, casa de campo, $500,000</p>
+            </div>
+        </section>
 
-        <div class="propiedad">
-            <h3>Casa en el centro</h3>
-            <p>3 habitaciones, 2 baños, jardín, $250,000</p>
-        </div>
-        <div class="propiedad">
-            <h3>Departamento en la playa</h3>
-            <p>2 habitaciones, 1 baño, vista al mar, $150,000</p>
-        </div>
-        <div class="propiedad">
-            <h3>Finca en el campo</h3>
-            <p>5 hectáreas, casa de campo, $500,000</p>
-        </div>
-    </section>
-
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Si tienes preguntas, no dudes en ponerte en contacto con nosotros.</p>
-        <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Si tienes preguntas, no dudes en ponerte en contacto con nosotros.</p>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+        
     <footer>
         <p>&copy; 2024 Inmobiliaria XYZ. Todos los derechos reservados.</p>
     </footer>

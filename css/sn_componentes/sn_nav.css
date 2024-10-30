@@ -1,0 +1,23 @@
+@import url("../sn_colores.css");
+header {
+    width: 100%;
+    background-color: var(--color-amarillo);
+    color: var(--color-marron-oscuro);
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}

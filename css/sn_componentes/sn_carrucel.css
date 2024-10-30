@@ -1,0 +1,28 @@
+/* Estilo para el carrusel */
+.carrusel {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+.imagenes {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.imagenes img {
+    width: 100%;
+    height: auto;
+}
+.botones {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.botones button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+}
