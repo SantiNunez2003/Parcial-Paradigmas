@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Inmobiliaria</title>
+</head>
+<body>
+    <header>
+        <h1>Inmobiliaria XYZ</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#propiedades">Propiedades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Bienvenido a Inmobiliaria XYZ</h2>
+        <p>Ofrecemos las mejores propiedades para ti y tu familia.</p>
+    </section>
+
+    <section id="propiedades">
+        <h2>Nuestras Propiedades</h2>
+
+        <!-- Carrusel -->
+        <div class="carrusel">
+            <div class="imagenes">
+                <img src="https://via.placeholder.com/600x400?text=Casa+en+el+centro" alt="Casa en el centro">
+                <img src="https://via.placeholder.com/600x400?text=Departamento+en+la+playa" alt="Departamento en la playa">
+                <img src="https://via.placeholder.com/600x400?text=Finca+en+el+campo" alt="Finca en el campo">
+            </div>
+            <div class="botones">
+                <button id="prev">❮</button>
+                <button id="next">❯</button>
+            </div>
+        </div>
+        <!-- Fin del Carrusel -->
+
+        <div class="propiedad">
+            <h3>Casa en el centro</h3>
+            <p>3 habitaciones, 2 baños, jardín, $250,000</p>
+        </div>
+        <div class="propiedad">
+            <h3>Departamento en la playa</h3>
+            <p>2 habitaciones, 1 baño, vista al mar, $150,000</p>
+        </div>
+        <div class="propiedad">
+            <h3>Finca en el campo</h3>
+            <p>5 hectáreas, casa de campo, $500,000</p>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Si tienes preguntas, no dudes en ponerte en contacto con nosotros.</p>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Inmobiliaria XYZ. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            let index = 0;
+            const images = $('.imagenes img');
+            const totalImages = images.length;
+
+            function showImage() {
+                const offset = -index * 100; // Mover el carrusel
+                $('.imagenes').css('transform', 'translateX(' + offset + '%)');
+            }
+
+            $('#next').click(function() {
+                index = (index + 1) % totalImages; // Incrementar el índice
+                showImage();
+            });
+
+            $('#prev').click(function() {
+                index = (index - 1 + totalImages) % totalImages; // Decrementar el índice
+                showImage();
+            });
+        });
+    </script>
+</body>
+</html>

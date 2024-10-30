@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f2f2f2;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/*-----------------------------------------------------*/
+
+ /* Estilo para el carrusel */
+ .carrusel {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+.imagenes {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.imagenes img {
+    width: 100%;
+}
+.botones {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+.botones button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+}
