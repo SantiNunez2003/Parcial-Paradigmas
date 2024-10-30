@@ -1,5 +1,7 @@
 @import url("./sn_componentes/sn_carrucel.css");
 @import url("./sn_componentes/sn_nav.css");
+@import url("./sn_componentes/sn_propiedades.css");
+@import url("./sn_componentes/sn_contacto.css");
 @import url("./sn_colores.css");
 
 body {
@@ -18,10 +20,15 @@ section {
     margin: 10px;
 }
 
+.propiedades{
+    color: var(--color-marron-oscuro);
+}
+
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #f2f2f2;
+    background-color: var(--color-marron);
+    color: black;
     position: relative;
     bottom: 0;
     width: 100%;

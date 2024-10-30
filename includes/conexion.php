@@ -4,7 +4,7 @@
         global $con;
         $username = "root";
         $password = "root";
-        $db = "halloween";
+        $db = "sn_parcial_inmobiliaria";
         $host = "localhost";
 
         $con = mysqli_connect($host, $username, $password, $db);

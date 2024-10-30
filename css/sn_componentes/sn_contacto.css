@@ -1,0 +1,53 @@
+.contacto {
+    max-width: 800px; 
+    margin: 20px auto; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.contacto h2 {
+    text-align: center; 
+    margin-bottom: 20px; 
+    color: #594B34; 
+}
+
+.contacto label {
+    display: block; 
+    margin: 10px 0 5px; 
+    font-weight: bold; 
+}
+
+.contacto input[type="text"],
+.contacto input[type="email"],
+.contacto select,
+.contacto textarea {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    margin-bottom: 15px; 
+    box-sizing: border-box; 
+}
+
+.contacto textarea {
+    height: 100px; 
+    resize: none; 
+}
+
+.contacto button {
+    background-color: #F2B705; 
+    color: #fff; 
+    border: none; 
+    border-radius: 4px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s; 
+}
+
+.contacto button:hover {
+    background-color: #E7E309; 
+}

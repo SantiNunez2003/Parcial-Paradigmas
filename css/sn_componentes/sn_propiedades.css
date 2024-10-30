@@ -1,0 +1,37 @@
+.propiedades {
+    text-align: center; 
+    padding: 20px; 
+}
+
+.propiedades h2 {
+    margin-bottom: 20px; 
+}
+
+.propiedades > div {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.propiedad {
+    margin: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    overflow: hidden; 
+    width: 300px; 
+    text-align: left; 
+}
+
+.propiedad img {
+    width: 300px; 
+    height: 200px; 
+    object-fit: fill; 
+}
+
+.propiedad h3 {
+    margin: 10px 0; 
+}
+
+.propiedad p {
+    margin: 5px 0; 
+}
