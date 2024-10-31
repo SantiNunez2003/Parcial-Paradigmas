@@ -19,6 +19,5 @@
             echo '<div>No hay propiedades destacadas en este momento.</div>';
         }
         ?>
-        
     </div>
 </section>

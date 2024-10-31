@@ -1,5 +1,5 @@
 <?php
-    include("includes/conexion.php");
+    include("includes/sn_conexion.php");
     conectar();
 ?>
 <!DOCTYPE html>

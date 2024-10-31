@@ -1,30 +1,30 @@
 <?php
-if (isset($_POST['nombre']) && isset($_POST['email']) && isset($_POST['telefono']) && isset($_POST['propiedad_id']) && isset($_POST['mensaje'])) {
-    // Escapar los datos recibidos
-    $nombre = $con->real_escape_string($_POST['nombre']);
-    $email = $con->real_escape_string($_POST['email']);
-    $telefono = $con->real_escape_string($_POST['telefono']);
-    $mensaje = $con->real_escape_string($_POST['mensaje']);
-    $propiedad_id = intval($_POST['propiedad_id']);
+    if (isset($_POST['nombre']) && isset($_POST['email']) && isset($_POST['telefono']) && isset($_POST['propiedad_id']) && isset($_POST['mensaje'])) {
+        // Escapar los datos recibidos
+        $nombre = $con->real_escape_string($_POST['nombre']);
+        $email = $con->real_escape_string($_POST['email']);
+        $telefono = $con->real_escape_string($_POST['telefono']);
+        $mensaje = $con->real_escape_string($_POST['mensaje']);
+        $propiedad_id = intval($_POST['propiedad_id']);
 
-    // Verificar que la propiedad exista
-    $sql = "SELECT * FROM propiedades WHERE id = $propiedad_id";
-    $result = $con->query($sql);
+        // Verificar que la propiedad exista
+        $sql = "SELECT * FROM propiedades WHERE id = $propiedad_id";
+        $result = $con->query($sql);
 
-    if ($result->num_rows === 0) {
-        echo "<script>alert('Error: La propiedad seleccionada no existe.');</script>";
-    } else {
-        // Insertar datos en la tabla de contactos
-        $sql = "INSERT INTO contactos (usuario_id, propiedad_id, mensaje) VALUES (NULL, $propiedad_id, '$mensaje')";
-        if ($con->query($sql) === TRUE) {
-            echo "<script>alert('Mensaje enviado con éxito.');</script>";
+        if ($result->num_rows === 0) {
+            echo "<script>alert('Error: La propiedad seleccionada no existe.');</script>";
         } else {
-            echo "<script>alert('Error al enviar el mensaje: " . $con->error . "');</script>";
+            // Insertar datos en la tabla de contactos
+            $sql = "INSERT INTO contactos (usuario_id, propiedad_id, mensaje) VALUES (NULL, $propiedad_id, '$mensaje')";
+            if ($con->query($sql) === TRUE) {
+                echo "<script>alert('Mensaje enviado con éxito.');</script>";
+            } else {
+                echo "<script>alert('Error al enviar el mensaje: " . $con->error . "');</script>";
+            }
         }
+        // Limpiar el POST y redirigir (opcional)
+        echo "<script>window.location='index.php?modulo=sn_contacto';</script>";
     }
-    // Limpiar el POST y redirigir (opcional)
-    echo "<script>window.location='index.php?modulo=sn_contacto';</script>";
-}
 ?>
 
 <section class="contacto">

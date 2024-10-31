@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('.carrusel').slick({
         dots: true,           // Muestra puntos de navegación
         infinite: true,      // Carrusel infinito
-        speed: 500,          // Velocidad de transición
+        speed: 300,          // Velocidad de transición
         slidesToShow: 1,     // Número de imágenes a mostrar
         slidesToScroll: 1,   // Número de imágenes a desplazar
         autoplay: true,      // Activar el autoplay
